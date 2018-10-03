@@ -54,7 +54,12 @@ class items extends CI_models
 			return $this->db->insert($this->table_items)
 	}
 	
-        
+    publc function enregitrement_coation_restau($id,$nom_restau, $apreciation){
+
+		if($)
+
+		$apreciation = $this->input->post('appreciation')
+	}    
         
         
         
