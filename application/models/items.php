@@ -50,8 +50,8 @@ class items extends CI_models
 				return $this->db->where('id', (int)id)
 				->update($this->table_items);
 			}
-			return $this->db->insert($this->table_items)
-	}
+			return $this->db->insert($this->table_items);
+		}
 //========================================================================================================================================================
 	// en cours...
     publc function enregitrement_cotation_item($id_item,$nom_item == null, $apreciation== null, $id_user == null, $id_resto == null){
