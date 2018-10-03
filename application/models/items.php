@@ -20,12 +20,8 @@ class items extends CI_models
 								->get($this->table_items)
 								->result();
 			return $requete;
-		}
-
-		
-		//echo "les items :" .$query->num_row();
-		}
 	}
+		
 //========================================================================================================================
 
 	// en cours...
@@ -100,8 +96,9 @@ class items extends CI_models
 		$data['upload_data'] = $this->upload->data(); 
 		$this->items_controllers->set_items($nom_item, $id_item, $apreciation, $id_resto, $id_user);
 		$this->load->view('vue_cotation_item', $data);
-	}    
-        
+	}
+
+}    
         
         
 
