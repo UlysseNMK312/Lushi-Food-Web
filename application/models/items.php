@@ -54,11 +54,48 @@ class items extends CI_models
 			return $this->db->insert($this->table_items)
 	}
 	
-    publc function enregitrement_coation_restau($id,$nom_restau, $apreciation){
+    publc function enregitrement_coation_restau($id_item,$nom_item == null, $apreciation== null, $id_user == null, $id_resto == null){
 
-		if($)
+		
+		$data[
+		$config['upload_path'] = './uploads/';
+		$config['allowed_types'] = 'gif|jpg|png';
+		$config['max_size']  = 100;
+		$config['max_width']  = 1024;
+		$config['max_height']  = 768;
+		
+		$this->load->library('upload', $config);
+		
+		if ( ! $this->upload->do_upload('image')){
+			$error = array('error' => $this->upload->display_errors());
+			$this->load->vue('vue_cotation_item', $error);
+		}
+		else{
+			$path = $this->upload->data();
+			$data = array('upload_data' => $this->upload->data());
+			foreach($chemin as $key => $value){
+				if($key === 'file_name'){
+					$path='./assets/uploads/'. $value;
+				}
+			}
 
-		$apreciation = $this->input->post('appreciation')
+			echo "success";
+		}
+		
+
+		
+		//if($nom_item == null AND $apreciation == null){
+
+			$apreciation = $this->input->post('appreciation');
+			$id_item = $this->input->get('id_item');
+			$nom_item = $this->imput->get('nom_item');
+			$id_user = $this->input->get('id_user');
+
+
+		//}
+		$data['upload_data'] = $this->upload->data(); 
+				$this->resto_dao->set_items($nom, $description, $pu, $id_categorie, $id_resto, $path);
+				$this->load->view('vue_items_info', $data);
 	}    
         
         
