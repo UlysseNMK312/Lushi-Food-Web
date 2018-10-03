@@ -11,12 +11,13 @@ class items extends CI_models
 		$this->load->database();
 		$this->load->helper(array('form', 'url'));
 	}
-	
+
+//-------------------------------------------------------------------------------------------------------------------------
 	public function afficher_items($id){
 
 			$query = $this->db->select(Array('nom','description','prix','images'))
 								->WHERE('id',(int)$id)
-								->get($this->table)
+								->get($this->table_items)
 								->result();
 			return $requete;
 		}
@@ -25,7 +26,7 @@ class items extends CI_models
 		//echo "les items :" .$query->num_row();
 		}
 	}
-
+//========================================================================================================================
 
 	// en cours...
 	public function supprimer_item($id_item)
