@@ -53,8 +53,8 @@ class items extends CI_models
 			}
 			return $this->db->insert($this->table_items)
 	}
-	
-    publc function enregitrement_coation_restau($id_item,$nom_item == null, $apreciation== null, $id_user == null, $id_resto == null){
+	// en cours...
+    publc function enregitrement_cotation_item($id_item,$nom_item == null, $apreciation== null, $id_user == null, $id_resto == null){
 
 		
 		$data[
@@ -86,10 +86,10 @@ class items extends CI_models
 		
 		//if($nom_item == null AND $apreciation == null){
 
-			$apreciation = $this->input->post('appreciation');
-			$id_item = $this->input->get('id_item');
-			$nom_item = $this->imput->get('nom_item');
-			$id_user = $this->input->get('id_user');
+		$apreciation = $this->input->post('appreciation');
+		$id_item = $this->input->get('id_item');
+		$nom_item = $this->imput->get('nom_item');
+		$id_user = $this->input->get('id_user');
 
 
 		//}
