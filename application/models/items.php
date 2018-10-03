@@ -9,6 +9,7 @@ class items extends CI_models
 		parent:: __construct();
 
 		$this->load->database();
+		$this->load->helper(array('form', 'url'));
 	}
 	
 	public function afficher_items($id){
@@ -36,6 +37,7 @@ class items extends CI_models
 		return $query;
 
 	}
+//===============================================================================================================================================
 
 	public function modification_item($id_item, $nom=null, $description=null, $prix_unitaire=null, $){
 	
@@ -53,6 +55,7 @@ class items extends CI_models
 			}
 			return $this->db->insert($this->table_items)
 	}
+//========================================================================================================================================================
 	// en cours...
     publc function enregitrement_cotation_item($id_item,$nom_item == null, $apreciation== null, $id_user == null, $id_resto == null){
 
