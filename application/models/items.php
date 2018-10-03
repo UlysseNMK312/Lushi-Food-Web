@@ -11,28 +11,15 @@ class items extends CI_models
 		$this->load->database();
 		$this->load->helper(array('form', 'url'));
 	}
-<<<<<<< HEAD
 
 //-------------------------------------------------------------------------------------------------------------------------
-=======
-//----------------------------------affichage item----------------------------------	
->>>>>>> controller
 	public function afficher_items($id){
 
 			$query = $this->db->select(Array('nom','description','prix','images'))
 								->WHERE('id',(int)$id)
 								->get($this->table_items)
 								->result();
-<<<<<<< HEAD
 			return $requete;
-=======
-			return $query;
-		}
-
-		
-		//echo "les items :" .$query->num_row();
-		}
->>>>>>> controller
 	}
 		
 //========================================================================================================================
@@ -47,14 +34,9 @@ class items extends CI_models
 		return $query;
 
 	}
-<<<<<<< HEAD
 //===============================================================================================================================================
 
 	public function modification_item($id_item, $nom=null, $description=null, $prix_unitaire=null, $){
-=======
-//------------------------mise a jour----------------------------------------------------------------------------------------
-	public function modification_item($id_item, $nom=null, $description=null, $prix_unitaire=null, $images=NULL){
->>>>>>> controller
 	
 			if ($nom == null AND $description == null AND $pu == null){
 				return false;
@@ -69,7 +51,6 @@ class items extends CI_models
 				->update($this->table_items);
 			}
 			return $this->db->insert($this->table_items);
-<<<<<<< HEAD
 		}
 //========================================================================================================================================================
 	// en cours...
@@ -123,11 +104,4 @@ class items extends CI_models
 
 
 
-=======
-	}
-	
-	
-        
-        
->>>>>>> controller
 ?>
