@@ -94,8 +94,8 @@ class items extends CI_models
 
 		//}
 		$data['upload_data'] = $this->upload->data(); 
-				$this->resto_dao->set_items($nom, $description, $pu, $id_categorie, $id_resto, $path);
-				$this->load->view('vue_items_info', $data);
+		$this->resto_dao->set_items($nom_item, $id_item, $apreciation, $id_resto, $path);
+		$this->load->view('vue_cotation_item', $data);
 	}    
         
         
