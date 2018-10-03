@@ -78,7 +78,11 @@ $db['default'] = array(
 	'hostname' => 'localhost',
 	'username' => 'root',
 	'password' => '',
+<<<<<<< HEAD
 	'database' => 'lushi_food_db.sql',
+=======
+	'database' => 'lushi_food_db',
+>>>>>>> 69ef993af17caff429a3bcadcf33915a50f7f7f0
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
