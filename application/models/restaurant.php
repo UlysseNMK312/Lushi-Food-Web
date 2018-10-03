@@ -8,7 +8,10 @@ class Restaurant extends CI_Models{
 	
 	parent :: __construct();
 	
-		$this->db->set("nom", $nom);
+		//$this->db->set("nom", $nom);
+		$this->load->database();
+		$this->load->controller('restau');
+		$this->load->helper(array('form', 'url'));
 
 	}
 	private function afficher_info_restau(){
