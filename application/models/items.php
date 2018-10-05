@@ -16,8 +16,8 @@ class items extends CI_models
 	public function afficher_items($id){
 
 		$requete = Doctrine_Query:: create()
-		->from('items')
-		->execute();
+			->from('items')
+			->execute();
 
 		foreach ($requete as $items) {
 	# code...
