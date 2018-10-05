@@ -13,7 +13,17 @@ class Restau extends CI_Controller {
     {
         $this->afficher_item();
     }
+//======================================================================================
+    public function afficher_item(){
+    	
+	    $query = $this->db->select(Array('nom','description','prix','images'))
+								->WHERE('id',(int)$id)
+								->get($this->table_items)
+								->result();
+			return $requete;
+        }
 }
+
 
 
 
