@@ -15,7 +15,7 @@ class items extends CI_models
 //-------------------------------------------------------------------------------------------------------------------------
 	public function afficher_items($id){
 
-		$requete = Doctrine_Query:: create()
+	/*	$requete = Doctrine_Query:: create()
 			->from('items')
 			->execute();
 
@@ -25,13 +25,13 @@ class items extends CI_models
 			echo $items->description.<br />
 			echo $items ->prix_unit.<br />
 			echo $items->images.<br />
-}	
+}	*/
 		
-	/*	$query = $this->db->select(Array('nom','description','prix','images'))
+		$query = $this->db->select(Array('nom','description','prix','images'))
 								->WHERE('id',(int)$id)
 								->get($this->table_items)
 								->result();
-			return $requete;*/
+			return $requete;
 	}
 		
 //========================================================================================================================
