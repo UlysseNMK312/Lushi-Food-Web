@@ -20,7 +20,7 @@ class Restau extends CI_Controller {
 
 		$data["info_resto"] = $this->item->afficher_items($id);
 			
-        $this->load->vue('vue_item')
+        $this->load->vue('vue_item', $data);
 
         }
 }
