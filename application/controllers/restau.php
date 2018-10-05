@@ -15,12 +15,13 @@ class Restau extends CI_Controller {
     }
 //======================================================================================
     public function afficher_item(){
-    	
-	    $query = $this->db->select(Array('nom','description','prix','images'))
-								->WHERE('id',(int)$id)
-								->get($this->table_items)
-								->result();
-			return $requete;
+        
+        $id = $this->input->get('id');
+
+		$data["info_resto"] = $this->item->afficher_items($id);
+			
+        $this->load->vue('vue_item')
+
         }
 }
 
