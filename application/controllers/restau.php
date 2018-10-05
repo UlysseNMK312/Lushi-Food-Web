@@ -8,6 +8,11 @@ class Restau extends CI_Controller {
         parent :: __construct();
         $this->load->model('restaurant');
     }
+
+    public function index()
+    {
+        $this->afficher_item();
+    }
 }
 
 
